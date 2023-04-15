@@ -1,3 +1,11 @@
+# Deixando repositórios mais rápidos
+sudo echo "
+fastestmirror=true
+deltarpm=true
+max_parallel_downloads=10
+" >> /etc/dnf/dnf.conf && exit
+
+
 # Atualização do Sistema
 sudo dnf upgrade -y
 sudo dnf autoremove -y
@@ -5,7 +13,7 @@ sudo dnf autoremove -y
 # Instalação do VLC
 sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
-sudo dnf install vlc -y
+sudo dnf install vlc  -y
 
 
 # Instalação do Navegador Brave 
@@ -16,7 +24,7 @@ sudo dnf install brave-browser -y
 
 
 # Instalação do Java 8
-sudo dnf install java-1.8.0-openjdk-devel
+sudo dnf install java-1.8.0-openjdk-devel -y
 
 # Download e Instalação do Eclipse para JavaEE
 wget -c https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2021-12/R/eclipse-jee-2021-12-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
@@ -38,6 +46,6 @@ cp eclipse.desktop ~/.local/share/applications/
 
 
 # Instalação de programas básicos
-sudo dnf install neofetch vim telegram-desktop git 
+sudo dnf install neofetch vim telegram-desktop git p7zip p7zip-plugins unrar qbittorrent -y
 
 
