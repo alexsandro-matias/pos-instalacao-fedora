@@ -44,3 +44,9 @@ Type=Application" > eclipse.desktop && cp eclipse.desktop ~/.local/share/applica
 
 # Instalação de programas básicos
 sudo dnf install neofetch vim telegram-desktop git p7zip p7zip-plugins unrar qbittorrent -y
+
+# Instalando idiomas PT-BR para Libreoffice
+sudo dnf install libreoffice-langpack-pt-BR
+git clone https://github.com/alexsandro-matias/autocompletar.git
+cp -R autocompletar/libreoffice/linux/4/ ~/.config/libreoffice/
+
