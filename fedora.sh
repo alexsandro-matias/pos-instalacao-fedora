@@ -1,7 +1,6 @@
 # Deixando repositórios mais rápidos
 sudo echo "
 fastestmirror=true
-deltarpm=true
 max_parallel_downloads=10
 " >> /etc/dnf/dnf.conf && exit
 
@@ -40,12 +39,8 @@ Comment=Eclipse
 Exec=/opt/eclipse/eclipse
 Icon=/opt/eclipse/icon.xpm
 Terminal=false
-Type=Application" > eclipse.desktop
-
-cp eclipse.desktop ~/.local/share/applications/
+Type=Application" > eclipse.desktop && cp eclipse.desktop ~/.local/share/applications/
 
 
 # Instalação de programas básicos
 sudo dnf install neofetch vim telegram-desktop git p7zip p7zip-plugins unrar qbittorrent -y
-
-
